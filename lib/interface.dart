@@ -24,22 +24,26 @@ class _InterfaceState extends State<Interface> {
     return SingleChildScrollView(
       child: Column(children: [
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.15,
+          height: MediaQuery.of(context).size.height * 0.17,
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.13,
+          height: MediaQuery.of(context).size.height * 0.17,
           child: const Text(
             'Log In',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.purple,
-              fontSize: 35,
+              fontSize: 50,
             ),
           ),
         ),
         TextFileds(),
+        const SizedBox(height: 15,),
         Row(
           children: [
+            const SizedBox(
+              width: 35,
+            ),
             Checkbox(
                 activeColor: Colors.purple,
                 value: isChecked,
@@ -52,7 +56,7 @@ class _InterfaceState extends State<Interface> {
           ],
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.2,
+          height: MediaQuery.of(context).size.height * 0.13,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -75,11 +79,22 @@ class _InterfaceState extends State<Interface> {
           ],
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.2,
+          height: MediaQuery.of(context).size.height * 0.07,
         ),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text('Log In'),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.45,
+          height: 50,
+          child: ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+              Colors.purple,
+            )),
+            onPressed: () {},
+            child: const Text(
+              'Log In',
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+          ),
         ),
         TextButton(
             onPressed: () {},
