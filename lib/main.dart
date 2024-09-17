@@ -13,9 +13,9 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class HomePageInterface extends StatelessWidget{
+class HomePageInterface extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
-    return Scaffold( body: Interface());
+  Widget build(BuildContext context) {
+    return Scaffold(body: Interface());
   }
 }

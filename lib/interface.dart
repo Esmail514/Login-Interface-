@@ -8,7 +8,7 @@ class Interface extends StatefulWidget {
 }
 
 class _InterfaceState extends State<Interface> {
-var isChecked = false;
+  var isChecked = false;
 
   Widget buildIconButton(Function choosedIcon, IconData icon, Color color) {
     return IconButton(
@@ -22,58 +22,59 @@ var isChecked = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-          child: Column(children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.15,
+      child: Column(children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.15,
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.13,
+          child: const Text(
+            'Log In',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.purple,
+              fontSize: 35,
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.13,
-              child: const Text(
-                'Log In',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.purple,
-                  fontSize: 35,
-                ),
-              ),
+          ),
+        ),
+        TextFileds(),
+        Row(
+          children: [
+            Checkbox(
+                activeColor: Colors.purple,
+                value: isChecked,
+                onChanged: (newValue) {
+                  setState(() {
+                    isChecked = newValue!;
+                  });
+                }),
+            const Text('Remamber me'),
+          ],
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.2,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            buildIconButton(
+              () {},
+              Icons.facebook,
+              Colors.blue,
             ),
-            TextFileds(),
-            Row(
-              children: [
-                Checkbox(
-                    activeColor: Colors.purple,
-                    value: isChecked,
-                    onChanged: (newValue) {
-                      setState(() {
-                        isChecked = newValue!;
-                      });
-                    }),
-                const Text('Remamber me'),
-              ],
+            buildIconButton(
+              () {},
+              Icons.email,
+              Colors.yellow,
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.2,
+            buildIconButton(
+              () {},
+              Icons.phone,
+              Colors.green,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                buildIconButton(
-                  () {},
-                  Icons.facebook,
-                  Colors.blue,
-                ),
-                buildIconButton(
-                  () {},
-                  Icons.email,
-                  Colors.yellow,
-                ),
-                buildIconButton(
-                  () {},
-                  Icons.phone,
-                  Colors.green,
-                ),
-              ],
-            ), SizedBox(
+          ],
+        ),
+        SizedBox(
           height: MediaQuery.of(context).size.height * 0.2,
         ),
         ElevatedButton(
@@ -88,7 +89,7 @@ var isChecked = false;
                 color: Colors.blue,
               ),
             ))
-          ]),
-        );
+      ]),
+    );
   }
 }

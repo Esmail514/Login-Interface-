@@ -46,7 +46,6 @@ class _TextFiledsState extends State<TextFileds> {
           height: 17,
         ),
         buildTextFiled(context, 'Password', passwordController),
-       
       ],
     );
   }
