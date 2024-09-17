@@ -41,12 +41,13 @@ class _TextFiledsState extends State<TextFileds> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-      buildTextFiled(context, 'Login', nameController),
-      const SizedBox(
-        height: 17,
-      ),
-      buildTextFiled(context, 'Password', passwordController),
-      
-    ]);
+        buildTextFiled(context, 'Login', nameController),
+        const SizedBox(
+          height: 17,
+        ),
+        buildTextFiled(context, 'Password', passwordController),
+       
+      ],
+    );
   }
 }
