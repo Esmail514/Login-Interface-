@@ -32,13 +32,15 @@ class _InterfaceState extends State<Interface> {
             'Log In',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.purple,
+              color: Color.fromRGBO(75, 83, 227, 1),
               fontSize: 50,
             ),
           ),
         ),
         TextFileds(),
-        const SizedBox(height: 15,),
+        const SizedBox(
+          height: 15,
+        ),
         Row(
           children: [
             const SizedBox(
@@ -82,17 +84,31 @@ class _InterfaceState extends State<Interface> {
           height: MediaQuery.of(context).size.height * 0.07,
         ),
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.45,
+          width: MediaQuery.of(context).size.width * 0.55,
           height: 50,
-          child: ElevatedButton(
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(
-              Colors.purple,
-            )),
-            onPressed: () {},
-            child: const Text(
-              'Log In',
-              style: TextStyle(color: Colors.white, fontSize: 20),
+          child: GestureDetector(
+            onTap: () {},
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                  colors: [
+                    const Color.fromARGB(255, 41, 49, 198).withOpacity(0.7),
+                    const Color.fromRGBO(227, 64, 191, 1)
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              alignment: Alignment.center,
+              child: const Text(
+                'Log in',
+                style: TextStyle(
+                  fontSize: 23,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
         ),
